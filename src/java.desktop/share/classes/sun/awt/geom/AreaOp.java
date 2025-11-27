@@ -157,15 +157,7 @@ public abstract class AreaOp {
         addEdges(edges, left, AreaOp.CTAG_LEFT);
         addEdges(edges, right, AreaOp.CTAG_RIGHT);
         Vector<Curve> curves = pruneEdges(edges);
-        if (false) {
-            System.out.println("result: ");
-            int numcurves = curves.size();
-            Curve[] curvelist = curves.toArray(new Curve[numcurves]);
-            for (int i = 0; i < numcurves; i++) {
-                System.out.println("curvelist["+i+"] = "+curvelist[i]);
-            }
-        }
-        return curves;
+	return curves;
     }
 
     private static void addEdges(Vector<Edge> edges, Vector<Curve> curves, int curvetag) {
